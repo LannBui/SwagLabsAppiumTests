@@ -1,0 +1,6 @@
+firstName,lastName,zipCode,expectedResult,expectedMessage
+John,Doe,12345,pass,
+,Smith,12345,failed,First Name is required
+John,,12345,failed,Last Name is required
+John,Doe,,failed,Postal Code is required
+,,12345,failed,First Name is required
