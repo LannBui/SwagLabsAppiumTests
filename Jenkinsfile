@@ -5,6 +5,7 @@ pipeline {
         ANDROID_HOME = 'C:\\Users\\bui.lan\\AppData\\Local\\Android\\Sdk'
         JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21'
         PATH = "${ANDROID_HOME}\\platform-tools;${ANDROID_HOME}\\emulator;${PATH}"
+         ANDROID_AVD_HOME = 'C:\\Users\\bui.lan\\.android\\avd'
     }
 
     stages {
