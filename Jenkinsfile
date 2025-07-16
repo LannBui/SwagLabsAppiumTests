@@ -19,6 +19,13 @@ pipeline {
             }
         }
 
+        stage('Start Appium Server') {
+            steps {
+                bat 'start /B appium'
+                sleep time: 15, unit: 'SECONDS'
+            }
+        }
+
         stage('Start Emulator') {
             steps {
                 bat '''
@@ -26,13 +33,6 @@ pipeline {
                     emulator -avd Pixel_9a -no-snapshot-load -no-audio -no-window
                 '''
                 sleep time: 30, unit: 'SECONDS'
-            }
-        }
-
-        stage('Start Appium Server') {
-            steps {
-                bat 'start /B appium'
-                sleep time: 15, unit: 'SECONDS'
             }
         }
 
