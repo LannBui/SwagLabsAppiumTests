@@ -13,8 +13,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                // checkout with timeout 10m
                 git url: 'https://github.com/LannBui/SwagLabsAppiumTests.git',
-                    branch: 'master'
+                    branch: 'master',
+                    timeout: 10
             }
         }
 
