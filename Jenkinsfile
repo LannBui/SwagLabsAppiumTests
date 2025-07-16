@@ -19,7 +19,7 @@ pipeline {
         stage('Start Emulator') {
             steps {
                 bat '''
-                    cd %LOCALAPPDATA%\\Android\\Sdk\\emulator
+                    cd C:\\Users\\bui.lan\\AppData\\Local\\Android\\Sdk\\emulator
                     emulator -avd Pixel_9a -no-snapshot-load -no-audio -no-window
                 '''
                 sleep time: 30, unit: 'SECONDS'
@@ -49,7 +49,7 @@ pipeline {
 
     post {
         always {
-            echo '✅ Test pipeline completed.'
+            echo 'Test pipeline completed.'
         }
     }
 }
