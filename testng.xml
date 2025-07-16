@@ -10,10 +10,10 @@
 <!--            <class name="tests.checkout.PriceVerificationTests"/>-->
 <!--            <class name="tests.cart.CartCountTests"/>-->
 <!--            <class name="tests.menu.QRCodeScannerTests"/>-->
-<!--            <class name="tests.login.LoginInvalidTest"/>-->
-<!--            <class name="tests.login.LoginValidTest"/>-->
+            <class name="tests.login.LoginInvalidTest"/>
+            <class name="tests.login.LoginValidTest"/>
 <!--            <class name="tests.menu.MenuNavigationTests"/>-->
-            <class name="tests.menu.GeoLocationTests"/>
+<!--            <class name="tests.menu.GeoLocationTests"/>-->
         </classes>
     </test>
 </suite>
