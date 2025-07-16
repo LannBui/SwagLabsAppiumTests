@@ -15,8 +15,7 @@ pipeline {
             steps {
                 // checkout with timeout 10m
                 git url: 'https://github.com/LannBui/SwagLabsAppiumTests.git',
-                    branch: 'master',
-                    timeout: 10
+                    branch: 'master'
             }
         }
 
@@ -39,7 +38,7 @@ pipeline {
 
         stage('Run TestNG Tests') {
             steps {
-                bat 'mvn clean test -DsuiteXmlFile=full-suite.xml'
+                bat 'mvn clean test -DsuiteXmlFile=testng.xml'
             }
         }
 
