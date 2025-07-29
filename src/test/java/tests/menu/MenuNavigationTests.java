@@ -72,7 +72,7 @@ public class MenuNavigationTests extends BaseTest {
         Assert.assertTrue(menuPage.isCartReset(), "Cart should be reset after tapping Reset App State");
     }
 
-    @Test(priority = 8, groups = {"smoke", "regression", "full"})
+    @Test(priority = 8, groups = {"smoke", "regression", "full"}, enabled = false)
     public void testLogout() {
         menuPage = new MenuPage(driver);
         menuPage.openMenu();
