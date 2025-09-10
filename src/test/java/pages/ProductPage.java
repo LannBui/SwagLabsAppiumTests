@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ProductPage {
-    private AndroidDriver driver;
+    private final AndroidDriver driver;
 
     private final By cartBadge = AppiumBy.xpath("//android.view.ViewGroup[@content-desc='test-Cart']/android.view.ViewGroup/android.widget.TextView");
 

@@ -19,26 +19,9 @@ pipeline {
             }
         }
 
-//         stage('Start Appium Server') {
-//             steps {
-//                 bat 'start /B appium'
-//                 sleep time: 15, unit: 'SECONDS'
-//             }
-//         }
-//
-//         stage('Start Emulator') {
-//             steps {
-//                 bat '''
-//                     cd C:\\Users\\bui.lan\\AppData\\Local\\Android\\Sdk\\emulator
-//                     emulator -avd Pixel_9a -no-snapshot-load -no-audio -no-window
-//                 '''
-//                 sleep time: 30, unit: 'SECONDS'
-//             }
-//         }
-
         stage('Run TestNG Tests') {
             steps {
-                bat 'mvn clean test -DsuiteXmlFile=full-suite.xml'
+                bat 'mvn clean test -DsuiteXmlFile=testng.xml -Denv=test'
             }
         }
 

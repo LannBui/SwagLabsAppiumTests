@@ -9,10 +9,6 @@ import java.util.Iterator;
 import java.util.List;
 
 public class CSVReaderUtils {
-    @DataProvider(name = "validLoginData")
-    public static Iterator<Object[]> getValidLoginData() throws Exception {
-        return getLoginData("src/test/resources/testdata/loginData.csv", "pass");
-    }
 
     @DataProvider(name = "invalidLoginData")
     public static Iterator<Object[]> getInvalidLoginData() throws Exception {
