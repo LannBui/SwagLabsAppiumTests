@@ -11,7 +11,7 @@ public class ConfigLoader {
         props = new Properties();
 
         try {
-            props.load(new FileInputStream("src/test/resources/config/" + env + ".properties"));
+            props.load(new FileInputStream("src/test/resources/config/environments/" + env + ".properties"));
             System.out.println("Loaded configuration for environment: " + env);
         } catch (IOException e) {
             throw new RuntimeException("Failed to load config for environment: " + env, e);
