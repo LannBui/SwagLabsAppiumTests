@@ -77,7 +77,7 @@ public class MenuNavigationTests extends BaseTest {
         menuPage = new MenuPage(driver);
         menuPage.openMenu();
         menuPage.tapLogout();
-        Assert.assertTrue(menuPage.isOnLoginPage(), "Should be on login page after logout");
+        Assert.assertTrue(menuPage.isOnLoginPage(), "Should be on Login Page after logout");
     }
 
     @Test(priority = 9, groups = {"regression", "full"})
