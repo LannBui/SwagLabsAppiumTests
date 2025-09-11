@@ -12,8 +12,8 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium.version>4.15.0</selenium.version>
-        <appium.version>9.0.0</appium.version>
+        <selenium.version>4.11.0</selenium.version>
+        <appium.version>8.6.0</appium.version>
     </properties>
 
     <dependencies>
@@ -60,7 +60,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>${suiteXmlFile:testng.xml}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
