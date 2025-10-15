@@ -10,7 +10,7 @@ import utils.ConfigLoader;
 public class LoginValidTest extends BaseTest {
 
     @Test(groups = {"smoke", "regression", "full"})
-    public void testValidLogin (String username, String password, String unusedMessage){
+    public void testValidLogin() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
         Assert.assertTrue(loginPage.isLoginSuccessful());

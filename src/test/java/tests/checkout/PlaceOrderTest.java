@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
+import utils.ConfigLoader;
 
 public class PlaceOrderTest extends BaseTest {
     private ProductPage productPage;
@@ -18,7 +19,7 @@ public class PlaceOrderTest extends BaseTest {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
         checkoutPage = new CheckoutPage(driver);
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
     }
     @Test(groups = {"regression", "full"})
     public void testPlaceOrderSuccessfully() {

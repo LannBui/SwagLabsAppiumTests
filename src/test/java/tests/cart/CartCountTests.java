@@ -8,6 +8,7 @@ import pages.CartPage;
 import pages.LoginPage;
 import pages.ProductDetailsPage;
 import pages.ProductPage;
+import utils.ConfigLoader;
 
 import java.time.Duration;
 
@@ -24,7 +25,7 @@ public class CartCountTests extends BaseTest {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
         productDetailsPage = new ProductDetailsPage(driver);
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
     }
 
     @Test(priority = 1, groups = {"smoke", "regression", "full"})
@@ -61,7 +62,7 @@ public class CartCountTests extends BaseTest {
         productPage.addProductToCartByIndex(0);
         Assert.assertEquals(productPage.getCartItemCount(),"1", "Cart should have 1 item before logout");
         productPage.openMenuAndLogout();
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
         Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed after logout");
         Assert.assertEquals(productPage.getCartItemCount(),"0", "Cart item should be 0 after logout");
     }
