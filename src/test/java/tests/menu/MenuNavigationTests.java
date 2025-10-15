@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.MenuPage;
+import utils.ConfigLoader;
 
 public class MenuNavigationTests extends BaseTest {
     MenuPage menuPage;
@@ -15,7 +16,7 @@ public class MenuNavigationTests extends BaseTest {
     public void loginAndSetup() {
       loginPage= new LoginPage(driver);
       menuPage= new MenuPage(driver);
-      loginPage.login("standard_user", "secret_sauce");
+    loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
     }
 
     @Test (priority = 1, groups = {"smoke", "regression", "full"})

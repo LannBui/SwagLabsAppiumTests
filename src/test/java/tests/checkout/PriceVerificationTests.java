@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
+import utils.ConfigLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ public class PriceVerificationTests extends BaseTest {
         checkoutPage = new CheckoutPage(driver);
         menuPage = new MenuPage(driver);
         checkoutOverviewPage = new CheckoutOverviewPage(driver);
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
     }
     @Test (priority = 1, groups = {"regression", "full"})
     public void testItemTotalTaxAndTotalCalculation() {

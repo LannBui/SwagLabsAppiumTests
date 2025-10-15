@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import pages.GeoLocationPage;
 import pages.LoginPage;
 import pages.MenuPage;
+import utils.ConfigLoader;
 
 public class GeoLocationTests extends BaseTest {
     private LoginPage loginPage;
@@ -19,7 +20,7 @@ public class GeoLocationTests extends BaseTest {
         loginPage = new LoginPage(driver);
         menuPage = new MenuPage(driver);
         geoLocationPage = new GeoLocationPage(driver);
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
     }
 
     @Test(priority = 1, groups = {"regression", "full"})

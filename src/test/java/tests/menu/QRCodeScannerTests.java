@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import pages.LoginPage;
 import pages.MenuPage;
 import pages.QRCodeScannerPage;
+import utils.ConfigLoader;
 
 public class QRCodeScannerTests extends BaseTest {
     private LoginPage loginPage;
@@ -19,7 +20,7 @@ public class QRCodeScannerTests extends BaseTest {
         loginPage = new LoginPage(driver);
         menuPage = new MenuPage(driver);
         qrCodeScannerPage = new QRCodeScannerPage(driver);
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
         menuPage.openMenu();
     }
 

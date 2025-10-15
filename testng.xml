@@ -11,7 +11,7 @@
 <!--            <class name="tests.cart.CartCountTests"/>-->
             <class name="tests.cart.CartCountTests"/>
 <!--            <class name="tests.login.LoginInvalidTest"/>-->
-<!--            <class name="tests.login.LoginValidTest"/>-->
+            <class name="tests.login.LoginValidTest"/>
 
         </classes>
     </test>

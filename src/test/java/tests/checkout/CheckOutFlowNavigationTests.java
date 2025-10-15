@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
+import utils.ConfigLoader;
 
 public class CheckOutFlowNavigationTests extends BaseTest {
     private ProductPage productPage;
@@ -20,7 +21,7 @@ public class CheckOutFlowNavigationTests extends BaseTest {
         cartPage = new CartPage(driver);
         checkoutPage = new CheckoutPage(driver);
         menuPage = new MenuPage(driver);
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
     }
     @Test (priority = 1, groups = {"regression", "full"})
     public void testProceedToCheckoutSuccessfully() {

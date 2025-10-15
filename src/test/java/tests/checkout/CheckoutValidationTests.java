@@ -8,12 +8,13 @@ import pages.CheckoutPage;
 import pages.LoginPage;
 import pages.ProductPage;
 import utils.CSVReaderUtils;
+import utils.ConfigLoader;
 
 public class CheckoutValidationTests extends BaseTest {
     @Test(groups = {"regression", "full"}, dataProvider = "checkoutData", dataProviderClass = CSVReaderUtils.class)
     public void testCheckoutValidation(String firstName, String lastName, String zip, String expectedResult, String expectedMessage){
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(ConfigLoader.getUsername(), ConfigLoader.getPassword());
 
         ProductPage productPage = new ProductPage(driver);
         productPage.addProductToCartByIndex(0);
